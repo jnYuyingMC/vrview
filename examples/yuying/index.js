@@ -25,6 +25,12 @@ var scenes = {
         yaw: 10,
         radius: 0.1,
         distance: 3
+      },
+      hall: {
+        pitch: 14,
+        yaw: -45,
+        radius: 0.1,
+        distance: 3
       }
     }
   },
@@ -43,6 +49,18 @@ var scenes = {
         yaw: -100,
         radius: 0.1,
         distance: 3
+      },
+      hall: {
+        pitch: 13,
+        yaw: -120,
+        radius: 0.1,
+        distance: 3
+      },
+      statue: {
+        pitch: -15,
+        yaw: -70,
+        radius: 0.1,
+        distance: 3
       }
     }
   },
@@ -50,9 +68,87 @@ var scenes = {
     image: 'gym.webp',
     preview: 'gym-preview.webp',
     hotspots: {
-      garden: {
+      playground: {
         pitch: -5,
         yaw: 100,
+        radius: 0.1,
+        distance: 3
+      }
+    }
+  },
+  hall: {
+    image: 'hall.webp',
+    preview: 'hall-preview.webp',
+    hotspots: {
+      garden: {
+        pitch: 2,
+        yaw: -120,
+        radius: 0.1,
+        distance: 3
+      },
+      playground: {
+        pitch: 2,
+        yaw: 120,
+        radius: 0.1,
+        distance: 3
+      },
+      statue: {
+        pitch: 2,
+        yaw: 100,
+        radius: 0.1,
+        distance: 3
+      }
+    }
+  },
+  statue: {
+    image: 'statue.webp',
+    preview: 'statue-preview.webp',
+    hotspots: {
+      hall: {
+        pitch: 29,
+        yaw: 20,
+        radius: 0.1,
+        distance: 3
+      },
+      playground: {
+        pitch: 13,
+        yaw: -75,
+        radius: 0.1,
+        distance: 3
+      },
+      gym: {
+        pitch: 0,
+        yaw: 28,
+        radius: 0.1,
+        distance: 3
+      },
+      top: {
+        pitch: 26,
+        yaw: -175,
+        radius: 0.1,
+        distance: 3
+      }
+    }
+  },
+  top: {
+    image: 'top.webp',
+    preview: 'top-preview.webp',
+    hotspots: {
+      statue: {
+        pitch: -30,
+        yaw: -90,
+        radius: 0.1,
+        distance: 3
+      },
+      gym: {
+        pitch: -16,
+        yaw: -78,
+        radius: 0.1,
+        distance: 3
+      },
+      hall: {
+        pitch: 8,
+        yaw: -78,
         radius: 0.1,
         distance: 3
       }
@@ -78,7 +174,7 @@ function onLoad() {
 
 function onVRViewReady(e) {
   console.log('onVRViewReady');
-  loadScene('gym');
+  loadScene('garden');
 }
 
 function onModeChange(e) {
